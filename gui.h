@@ -84,7 +84,12 @@ public:
                                 path_finding_manager.exec(graph, AStar);
                                 break;
                             }
-                            // R = Limpia la ultima simulación realizada.
+                            // B = Ejecutar BestFirst
+                            case sf::Keyboard::B: {
+                                path_finding_manager.exec(graph, BestFirst);
+                                break;
+                            }
+                                // R = Limpia la ultima simulación realizada.
                             //     También restaura los valores de 'src' y 'dest' a nullptr.
                             case sf::Keyboard::R: {
                                 path_finding_manager.reset();
